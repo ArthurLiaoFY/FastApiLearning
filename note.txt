@@ -1,0 +1,11 @@
+GET應用可以分為三種類型來討論。
+--路徑參數（Path parameters）
+--預定義值Predefined values
+--查詢參數Query parameters
+
+Concurrency：Multi-thread，多線程（多執行緒）程式會把一個工作拆分成數個子任務，並利用好幾個thread同時運行子任務。
+Parallelism：Load balancing，負載平衡機制，例如為了把網站流量分散，我架設了多個相同內容的網頁伺服器，並將訪客平均分配到這些伺服器上。
+
+To send data, you should use one of: POST (the more common), PUT, DELETE or PATCH.
+Sending a body with a GET request has an undefined behavior in the specifications, nevertheless, it is supported by FastAPI, only for very complex/extreme use cases.
+As it is discouraged, the interactive docs with Swagger UI won't show the documentation for the body when using GET, and proxies in the middle might not support it.
